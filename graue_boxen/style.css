@@ -1,0 +1,15 @@
+header {
+    background-color: gray;
+    height: 80px;
+}
+
+#logo {
+    background-color: indianred;
+    height: 20px;
+    width: 30%;
+}
+
+nav {
+    background-color: lightblue;
+    height: 20px;
+}
