@@ -1,3 +1,5 @@
+/* GENERAL STYLES */
+
 * {
     box-sizing: border-box;
 }
@@ -6,7 +8,7 @@ body {
     margin: 0;
     background-color: black;
     color: white;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 
 #wrapper {
@@ -26,6 +28,9 @@ header {
 
 nav {
     background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul {
@@ -39,6 +44,17 @@ nav ul li {
     padding: 0 2em; /* 0 unten/oben, 2em rechts/links */
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.active-link {
+    font-weight: bold;
+}
+
+/* OVERVIEW STYLES */
+
 #solar-system-wrapper {
     display: flex;
     flex-direction: row;
@@ -51,10 +67,24 @@ nav ul li {
     background-color: gold;
     width: 10vw;
     height: 10vw;
+    box-shadow: 0 0 0.5em 0.5em rgba(255, 255, 255, 0.25);
 }
 
 .planet {
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.planet:hover {
+    box-shadow: 0 0 0.5em 0.5em white;
+}
+
+.gas-giant:hover {
+    box-shadow: 0 0 0.5em 0.5em orange;
+}
+
+.ice-giant:hover {
+    box-shadow: 0 0 0.5em 0.5em blue;
 }
 
 .mercury {
@@ -109,4 +139,17 @@ nav ul li {
     background-color: #a9a9a9;
     width: 1.5vw;
     height: 1.5vw;
+}
+
+/* PLANET DESCRIPTION STYLES */
+
+.planet-description {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.description-text-container {
+ display:flex;
+ flex-direction: column;  
+ justify-content: center; 
 }
